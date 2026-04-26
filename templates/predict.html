@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+.box {
+    background: white;
+    color: black;
+    width: 420px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+button {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+ul {
+    text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Upload Audio</h2>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="audio" required onchange="previewFile()"><br><br>
+
+    <audio id="audioPreview" controls></audio><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+2
+
+{% if result %}
+<hr>
+
+<h3>Result</h3>
+
+<p><b>Audio:</b> {{ filename }}</p>
+<p><b>Prediction:</b> {{ prediction }}</p>
+<p><b>Confidence:</b> {{ confidence }}%</p>
+
+<h4>Top Features</h4>
+<ul>
+{% for f in features %}
+<li>{{ f }}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+<br>
+<a href="/">⬅ Home</a>
+
+</div>
+
+<script>
+function previewFile() {
+    const file = document.querySelector('input[type=file]').files[0];
+    const preview = document.getElementById('audioPreview');
+    preview.src = URL.createObjectURL(file);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:linear-gradient(to right,#141e30,#243b55);
+    color:white;
+    text-align:center;
+    margin:0;
+}
+
+.box{
+    background:white;
+    color:black;
+    width:450px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:12px;
+}
+
+button{
+    padding:10px 20px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+img{
+    width:320px;
+    margin-top:10px;
+    border-radius:10px;
+}
+
+ul{
+    text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Upload Audio</h2>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+
+<input type="file" name="audio" required><br><br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+{% if result %}
+
+<hr>
+
+<p><b>File:</b> {{ filename }}</p>
+
+<h3>Spectrogram</h3>
+<img src="{{ spectrogram }}">
+
+<p><b>Prediction:</b> {{ prediction }}</p>
+
+<p><b>Confidence:</b> {{ confidence }}%</p>
+
+<h3>Top Features</h3>
+
+<ul>
+{% for f in features %}
+<li>{{ f }}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+<br>
+<a href="/">⬅ Home</a>
+
+</div>
+
+</body>
+</html>

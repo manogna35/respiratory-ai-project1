@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+.container{
+    width:92%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.hero{
+    text-align:center;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#d9ecff;
+}
+
+.banner{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:18px;
+    margin:20px 0 30px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h2{
+    color:#1b4f72;
+    margin-top:0;
+}
+
+.card p, .card li{
+    font-size:16px;
+    line-height:1.6;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px;
+    margin-top:30px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,0.12);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    backdrop-filter:blur(6px);
+}
+
+.stat-box h3{
+    font-size:32px;
+    margin:0;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    padding-bottom:30px;
+}
+
+a{
+    color:#ffd700;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+<h1>About Our Project</h1>
+<p>AI Powered Respiratory Health Sound Analyzer for smart and early disease detection.</p>
+</div>
+
+<img class="banner" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80">
+
+<div class="grid">
+
+<div class="card">
+<h2>Project Overview</h2>
+<p>
+This intelligent healthcare system analyzes breathing, coughing, and wheezing sounds to identify possible respiratory diseases using Artificial Intelligence and Deep Learning.
+</p>
+</div>
+
+<div class="card">
+<h2>Why This Project?</h2>
+<p>
+Respiratory diseases are common and sometimes detected late. This project helps in early screening, faster diagnosis support, and remote monitoring.
+</p>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>Easy audio upload</li>
+<li>Instant prediction results</li>
+<li>Confidence score display</li>
+<li>User-friendly interface</li>
+<li>Supports early detection</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Dataset Used</h2>
+<p>
+ICBHI Respiratory Sound Dataset containing real patient breathing recordings. Data augmentation was used to improve model performance.
+</p>
+</div>
+
+<div class="card">
+<h2>Features Extracted</h2>
+<ul>
+<li>MFCC</li>
+<li>Mel Spectrogram</li>
+<li>Spectral Contrast</li>
+<li>Zero Crossing Rate</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>System Workflow</h2>
+<ul>
+<li>Upload Audio File</li>
+<li>Convert to Spectrogram</li>
+<li>Extract Audio Features</li>
+<li>Predict Disease</li>
+<li>Display Confidence Score</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Diseases Detected</h2>
+<ul>
+<li>Asthma</li>
+<li>COPD</li>
+<li>Pneumonia</li>
+<li>Bronchiectasis</li>
+<li>Healthy Condition</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Advantages</h2>
+<ul>
+<li>Early disease detection</li>
+<li>Quick analysis</li>
+<li>Low-cost healthcare support</li>
+<li>User-friendly interface</li>
+<li>Remote patient monitoring</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Technologies Used</h2>
+<ul>
+<li>Python</li>
+<li>Flask</li>
+<li>TensorFlow / Keras</li>
+<li>HTML / CSS</li>
+<li>Librosa</li>
+<li>NumPy / Matplotlib</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Future Enhancements</h2>
+<ul>
+<li>Mobile App Integration</li>
+<li>Cloud Report Storage</li>
+<li>Wearable Device Support</li>
+<li>Real-time Monitoring</li>
+<li>Hospital System Integration</li>
+</ul>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>5+</h3>
+<p>Diseases Detected</p>
+</div>
+
+<div class="stat-box">
+<h3>AI</h3>
+<p>Smart Prediction Engine</p>
+</div>
+
+<div class="stat-box">
+<h3>24/7</h3>
+<p>Remote Monitoring Scope</p>
+</div>
+
+<div class="stat-box">
+<h3>Fast</h3>
+<p>Instant Results</p>
+</div>
+
+</div>
+
+<div class="footer">
+<h2>Developed by Final Year CSE Students</h2>
+<p>Innovating Healthcare with Artificial Intelligence</p>
+<p><a href="/">⬅ Back to Home</a></p>
+</div>
+
+</div>
+
+</body>
+</html>
